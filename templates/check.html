@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+<div>
+    <form action="/check" method="post">
+        <div class="mb-3">
+            <h3>Generate a QR</h3>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="qrdescription" placeholder="Enter the url" type="text" required = "true">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="qrname" placeholder="Name for the QR code" type="text" required="true">
+        </div>
+       
+        <button class="btn btn-primary" type="submit">Generate QR</button>
+    </form>
+    <!-- <div>
+        View your QR's <a href="/">Register</a>
+    </div> -->
+</div>
+{% endblock %}

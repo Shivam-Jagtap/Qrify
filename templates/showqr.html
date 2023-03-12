@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+<div class="mb-3">
+<table>
+    <tr>
+        <th>QR name </th>
+        <th>URL  </th>
+        
+    </tr>
+    {% for row in qrs %}
+        <tr>
+            <td>
+                {{row.qrname}}
+            </td>
+            <td>
+                {{row.qrdescription}}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}
